@@ -13,27 +13,27 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
-}
-
 body {
   margin: 0;
-  display: flex;
-  place-items: center;
+  display: block;
   min-width: 320px;
   min-height: 100vh;
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+.section-blur {
+  transition: filter 0.5s ease-out;
+  filter: blur(10px);
+  opacity: 0.8; /* Optional: adds a slight fade with blur */
 }
+
+.section-clear {
+  filter: blur(0);
+  opacity: 1; /* Restores full opacity */
+  transition: filter 0.5s ease-out, opacity 0.5s ease-out;
+}
+
+
+
 
 button {
   border-radius: 8px;
